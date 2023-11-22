@@ -1,0 +1,29 @@
+body {
+  background-image: url(../img/registro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-header {
+  background-color: rgb(176, 91, 255);
+}
+
+.btn-registro {
+  background-color: #45484a;
+  border-color: #ffffff;
+  height: 40px;
+}
+
+.btn-registro:hover {
+  color: rgb(176, 91, 255) !important;
+}
+
+a {
+  text-decoration: none;
+  color: #45484a;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(176, 91, 255);
+}

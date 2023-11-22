@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.bg-purple {
+  background-color: #800080;
+}
+
+.text-purple {
+  color: #800080;
+}
+
+.btn-purple {
+  background-color: #45484a;
+  border-color: #45484a;
+  color: #ffffff;
+}
+
+.btn-purple:hover {
+  background-color: #45484a;
+  border-color: #45484a;
+  color: rgb(176, 91, 255);
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgb(176, 91, 255);
+}
+
+.form-control {
+  border: 1px solid #ccc;
+}
+
+.form-control:focus {
+  border-color: rgb(176, 91, 255);
+  box-shadow: none;
+}

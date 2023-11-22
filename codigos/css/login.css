@@ -1,0 +1,60 @@
+body {
+  background-image: url(../img/login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  margin-top: 0px;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+}
+.card-action {
+  border-radius: 10px 10px 0 0;
+}
+.card-header {
+  background-color: rgb(176, 91, 255);
+}
+
+.btn-inicio {
+  background-color: #45484a;
+  border-color: #ffffff;
+}
+
+.btn-face {
+  background-color: #45484a;
+  border-color: #2ecc71;
+}
+
+.btn-twit {
+  background-color: #45484a;
+  border-color: #ffffff;
+}
+
+.btn-goog {
+  background-color: #45484a;
+  border-color: #ffffff;
+}
+
+.btn-inicio,
+.btn-face,
+.btn-twit,
+.btn-goog {
+  height: 35px;
+}
+
+.btn-inicio:hover,
+.btn-face:hover,
+.btn-twit:hover,
+.btn-goog:hover {
+  color: rgb(176, 91, 255) !important;
+}
+
+a {
+  text-decoration: none;
+  color: #45484a;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(176, 91, 255);
+}

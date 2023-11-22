@@ -1,0 +1,350 @@
+ul li {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: aliceblue;
+  display: flex;
+  position: fixed;
+  border-radius: 0px 0px 5px 5px;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #45484a;
+}
+
+img {
+  border-radius: 10px;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.titulo {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.titulo h1 {
+  padding: 20px;
+}
+
+.primero {
+  color: #45484a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.segundo {
+  color: rgb(176, 91, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.menu ul {
+  padding: 1px 30px;
+}
+
+.menu {
+  width: 100%;
+  text-align: right;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+div.menu a:hover {
+  color: rgb(176, 91, 255);
+}
+
+.slider {
+  width: 100%;
+  height: 600px;
+  padding-top: 70px;
+  background-image: url("..//img/portada2.webp");
+  background-size: cover;
+}
+
+.slider h1 {
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  top: 40%;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 5px 5px #0f0f0f;
+}
+
+.parallax {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5e81f296eca8656d4cc7f9ac/1625218190083-45ABEW5ZJG5BIZRCS5O6/SwiftGym036_sr.jpg?format=2500w");
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+}
+
+.info .continfo {
+  width: 80%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+
+.info .continfo .trainer {
+  width: 30%;
+  height: 400px;
+  display: inline-block;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+.info .continfo .text {
+  font-size: 22px;
+  margin: 20px;
+  padding-bottom: 50px;
+  text-align: justify;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+
+.diet {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: aliceblue;
+}
+
+.diet .dieta {
+  width: 80%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+
+.diet .dieta .trainer {
+  width: 30%;
+  height: 400px;
+  margin: 50px 50px;
+  border-radius: 10px;
+  float: left;
+}
+
+.diet .dieta .text {
+  font-size: 27px;
+  top: 20%;
+  position: relative;
+  margin: 20px;
+  padding-bottom: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+
+.dieta #diet1 {
+  background-image: url("../img/COMIDA\ SANA.jpg");
+  background-size: cover;
+  background-position-x: center;
+}
+
+#tr1 {
+  background-image: url("../img/entrenador1.jpeg");
+  background-size: cover;
+  background-position-x: center;
+}
+#tr2 {
+  background-image: url("../img/entrenador2.jpg");
+  background-size: cover;
+  background-position-x: center;
+}
+
+#tr3 {
+  background-image: url("../img/entrenador3.jpg");
+  background-size: cover;
+  background-position-x: center;
+}
+
+.muscle h1 {
+  margin: 30px 0px;
+}
+
+.muscle .con {
+  width: 100%;
+  margin: 70px 0px;
+}
+.b1 {
+  width: 300px;
+  height: 400px;
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0.4vw 0.4vw 0 #333, 0 0.4vw 0.4vw 0.1vw #333;
+}
+
+#b1 {
+  height: 20px;
+  border: 0px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(176, 91, 255);
+  border-radius: 0%;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  opacity: 0.7;
+}
+
+.b1:hover .overlay {
+  height: 20%;
+}
+
+.overlay .text {
+  color: white;
+  font-size: 3vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex-basis: 33%;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+.fa {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #555;
+  color: #fff;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.fa:hover {
+  background-color: #333;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+.social {
+  display: flex;
+}
+
+.social li {
+  margin-right: 10px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #222;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.social a:hover {
+  background-color: slateblue;
+  color: #fff;
+  text-decoration: none;
+}

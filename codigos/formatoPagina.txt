@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php
+    // invoca cabecera de pa pagina
+    include_once('codigos/enca.inc');
+    ?>
+</head>
+<body>
+    <header>
+        <?php
+        // invoca menu de pa pagina
+        include_once('codigos/menu.inc');
+        ?>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <?php
+            // llama al pie de la pagina
+            include_once('codigos/pie.inc');
+        ?>
+    </footer>
+</body>
+</html>
