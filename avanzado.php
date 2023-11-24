@@ -1,105 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <?php
-    // invoca cabecera de la página
-    include_once('codigos/enca.inc');
-    ?>
+  <head>
+    <?php include("codigos/enca.inc");?>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="codigos/css/avanzado.css" />
+    <link rel="icon" href="codigos/img/th.jpeg" />
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
+        /* Estilo para el botón de generar PDF */
+        .btn-generar-pdf {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #ad69c9;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
         }
 
-        main {
-            flex: 1;
-        }
-
-        .welcome-section {
-            background-color: rgb(176, 91, 255); /* Cambia esto al color que desees */
-            padding-top: 100px;
-            padding-bottom: 100px;
-            text-align: center;
-            color: white;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .years-dropdown {
-            margin-bottom: 10px;
-        }
-
-        /* Estilos para el formulario */
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: rgb(176, 91, 255);
-        }
-
-        button {
-            background-color: rgb(176, 91, 255);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #563d7c;
+        .btn-generar-pdf:hover {
+        background-color: #905baf;
         }
     </style>
-</head>
-<body>
-    <header>
-        <?php
-        // invoca menú de la página
-        include_once('codigos/menu.inc');
-        ?>
-    </header>
+  </head>
+  <header>
+    <?php include("codigos/menu.inc");?>
+  </header>
+  <body>
     <main>
-        <div class="container-fluid welcome-section">
-            <h1>Bienvenidos a las Rutinas para Avanzados</h1>
-            <p>Aquí encontrarás rutinas de entrenamiento personalizadas para diferentes años de experiencia en el gimnasio</p>
+    <form action="codigos/pdfavanz.php" method="get">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mt-3"></div>
+      </div>
+      <div class="row colorFondo">
+        <div class="col-2"></div>
+        <div class="col-8 mt-4 p-2">
+          <h1
+            class="mt-5 d-flex justify-content-center align-items-center text-white"
+          >
+            Bienvenidos a las Rutinas para Avanzados
+          </h1>
+          <p
+            class="mt-3 d-flex justify-content-center align-items-center text-white"
+          >
+            Aquí encontrarás rutinas de entrenamiento personalizadas para
+            diferentes años de experiencia en el gimnasio
+          </p>
         </div>
-        <div class="container mt-4">
-            <h2 class="mb-4">
-                Selecciona la Cantidad de Años de Entrenamiento
-            </h2>
-            <form method="post" action="pdfentre.php">
-                <!-- Cantidad de años de experiencia -->
-                <div class="form-group">
-                    <select class="form-control years-dropdown" name="years" id="years">
-                        <option value="1">1 año</option>
-                        <option value="2">2 años</option>
-                        <option value="3">3 años</option>
-                        <option value="4">4 años</option>
-                        <option value="5">5 años o más</option>
-                    </select>
-                </div>
-                <!-- Botón para generar el PDF -->
-                <button type="submit" class="btn btn-primary">Generar PDF</button>
-            </form>
-        </div>
+        <div class="col-2"></div>
+      </div>
+      <div class="container">
+        <h2 class="mb-4 d-flex justify-content-center align-items-center mt-4">
+          Selecciona la Cantidad de Años de Entrenamiento
+        </h2>
+        <select id="yearsOfTraining" name="yearsOfTraining" class="form-control mb-4 mt-2">
+            <option value="2">2 Años</option>
+            <option value="3">3 Años</option>
+            <option value="4">4 Años</option>
+            <option value="5">5 Años o más</option>
+        </select>
+      </div>
+
+      <div class="container">
+        <h2 class="mb-4 mt-3 d-flex justify-content-center align-items-center">
+          Rutinas de la Semana
+        </h2>
+        <div id="routineContainer" class="row"></div>
+        <div><button type="submit" class="btn-generar-pdf">Generar PDF</button></div>
+      </div>
+    </div>
+    </form>
     </main>
-    <footer>
-        <?php
-        // llama al pie de la página
-        include_once('codigos/pie.inc');
-        ?>
+    <footer id="contact">
+      <?php include("codigos/pie.inc");?>
     </footer>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="codigos/js/avanzado.js"></script>
+  </body>
 </html>
