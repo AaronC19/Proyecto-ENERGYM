@@ -32,5 +32,7 @@ VALUES
 
 select *  from usuarios
 
+La contraseña para iniciar sesion como administrador con esos usuarios es proyectoweb
+
 
 
