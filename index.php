@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php
     // invoca cabecera de pa pagina
     include_once('codigos/enca.inc');
     ?>
 </head>
+
 <body>
     <header>
         <?php
@@ -14,24 +16,6 @@
         ?>
     </header>
     <main>
-        <nav>
-            <div class="titulo">
-                <h1 class="primero">ENER<span class="segundo">GYM</span></h1>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="">DIETA</a></li>
-                    <li><a href="#info">SOBRE NOSOTROS</a></li>
-                    <li><a href="#contact">CONTACTO</a></li>
-                    <li>
-                        <a href="login.html">INICIO DE SESION</a>
-                    </li>
-                    /
-                    <li><a href="registro.html">REGISTRARME</a></li>
-                </ul>
-            </div>
-        </nav>
 
         <div class="slider" id="inicio">
             <h1 id="slogantext">"Una vida, mantente en forma, lucha por ella.."</h1>
@@ -95,51 +79,40 @@
         <div class="muscle" id="muscle">
             <center>
                 <div class="con">
-                    <h1
-                        style="
+                    <h1 style="
                         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
                             sans-serif;
-                        "
-                    >
+                        ">
                         <div class="parallax"></div>
                         Selecciona el nivel en el que te encuentras 🔥
                     </h1>
 
-                    <a href="principiante.html">
-                        <div
-                            class="b1"
-                            style="
+                    <a href="principiante.php">
+                        <div class="b1" style="
                             background-image: url('codigos/img/principiante.jpg');
                             background-size: cover;
-                            "
-                        >
+                            ">
                             <div class="overlay">
                                 <div class="text">Principiante</div>
                             </div>
                         </div>
                     </a>
-                    <a href="intermedio.html">
-                        <div
-                            class="b1"
-                            style="
+                    <a href="intermedio.php">
+                        <div class="b1" style="
                             background-image: url('codigos/img/intermedio.jpg');
                             background-size: cover;
-                            "
-                        >
+                            ">
                             <div class="overlay">
                                 <div class="text">Intermedio</div>
                             </div>
                         </div>
                     </a>
                     <a href="avanzado.php">
-                        <div
-                            class="b1"
-                            style="
+                        <div class="b1" style="
                             background-image: url('codigos/img/avanzado.jpeg');
                             background-size: cover;
                             background-position-y: -50px;
-                            "
-                        >
+                            ">
                             <div class="overlay">
                                 <div class="text">Avanzado</div>
                             </div>
@@ -151,9 +124,10 @@
     </main>
     <footer>
         <?php
-            // llama al pie de la pagina
-            include_once('codigos/pie.inc');
+        // llama al pie de la pagina
+        include_once('codigos/pie.inc');
         ?>
     </footer>
 </body>
+
 </html>
