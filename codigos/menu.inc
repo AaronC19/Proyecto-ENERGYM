@@ -10,10 +10,10 @@
       <li><a href="index.php/#info">SOBRE NOSOTROS</a></li>
       <li><a href="#contact">CONTACTO</a></li>
       <li>
-        <a href="">INICIO DE SESION</a>
+        <a href="login.php">INICIO DE SESION</a>
       </li>
       /
-      <li><a href="">REGISTRARME</a></li>
+      <li><a href="registro.php">REGISTRARME</a></li>
     </ul>
   </div>
 </nav>
