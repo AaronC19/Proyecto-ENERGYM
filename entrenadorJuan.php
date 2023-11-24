@@ -3,35 +3,23 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juan José Vásquez - Entrenador Personal</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="codigos/css/entrenadores.css" />
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-purple">
         <div class="container">
             <a class="navbar-brand text-white" href="#">Juan José Vásquez</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div
-                class="collapse navbar-collapse d-flex justify-content-end align-items-end"
-                id="navbarNav"
-            >
+            <div class="collapse navbar-collapse d-flex justify-content-end align-items-end" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="index.php">Inicio</a>
@@ -86,7 +74,9 @@
                             <p class="card-text">Asesoramiento nutricional</p>
                             <p class="card-text">Medidas corporales</p>
                             <p class="card-text">10.000₡ al mes</p>
-                            <a href="#" class="btn btn-purple">Comprar</a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-purple">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,7 +88,9 @@
                             <p class="card-text">Asesoramiento nutricional avanzado</p>
                             <p class="card-text">Acceso a clases grupales</p>
                             <p class="card-text">18.000₡ al mes</p>
-                            <a href="#" class="btn btn-purple">Comprar</a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-purple">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,7 +102,9 @@
                             <p class="card-text">Asesoramiento nutricional personalizado</p>
                             <p class="card-text">Acceso ilimitado a clases y gimnasio</p>
                             <p class="card-text">25.000₡ al mes</p>
-                            <a href="#" class="btn btn-purple">Comprar</a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-purple">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,12 +128,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Mensaje</label>
-                            <textarea
-                                class="form-control"
-                                id="message"
-                                rows="4"
-                                required
-                            ></textarea>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-purple btn-block">
                             Enviar
@@ -159,4 +148,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

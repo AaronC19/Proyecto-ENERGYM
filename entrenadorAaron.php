@@ -73,7 +73,9 @@
                             <p class="card-text">Asesoramiento nutricional</p>
                             <p class="card-text">Medidas corporales</p>
                             <p class="card-text">10.000₡ al mes</p>
-                            <a href="#" class="btn btn-purple">Comprar</a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-purple">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,7 +87,9 @@
                             <p class="card-text">Asesoramiento nutricional avanzado</p>
                             <p class="card-text">Acceso a clases grupales</p>
                             <p class="card-text">18.000₡ al mes</p>
-                            <a href="#" class="btn btn-purple">Comprar</a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-purple">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,7 +101,9 @@
                             <p class="card-text">Asesoramiento nutricional personalizado</p>
                             <p class="card-text">Acceso ilimitado a clases y gimnasio</p>
                             <p class="card-text">25.000₡ al mes</p>
-                            <a href="#" class="btn btn-purple">Comprar</a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-purple">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </div>

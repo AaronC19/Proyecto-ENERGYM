@@ -1,5 +1,5 @@
-CREATE DATABASE inicioderegistro
-use inicioderegistro
+CREATE DATABASE inicioderegistro;
+USE inicioderegistro;
 
 
 CREATE TABLE usuarios (
@@ -29,10 +29,8 @@ VALUES
 ('Juan', 'juanjose123@gmail.com', '$2y$10$TE.qVSew2x21ujERS0QRAO2Ix/8sXkC.34Qo2dG/Ak/SREY7FFcHu', 'administrador'),
 ('Emmanuel', 'emmanuel123@gmail.com', '$2y$10$TE.qVSew2x21ujERS0QRAO2Ix/8sXkC.34Qo2dG/Ak/SREY7FFcHu', 'administrador');
 
-
-select *  from usuarios
-
+/*
 La contraseña para iniciar sesion como administrador con esos usuarios es proyectoweb
-
+*/
 
 

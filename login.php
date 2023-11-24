@@ -1,50 +1,39 @@
 <?php
-// Establecer la conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "aaronCR14";
+$password = "Maniakoloko1332*";
 $dbname = "inicioderegistro";
 
-// Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recuperar datos del formulario y evitar inyección SQL
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['contrasena']);
 
-    // Consulta preparada para evitar inyección SQL
     $query = $conn->prepare("SELECT * FROM usuarios WHERE nombre_usuario = ?");
     $query->bind_param("s", $username);
     $query->execute();
     $result = $query->get_result();
 
     if ($result->num_rows > 0) {
-        // Usuario encontrado, verificar la contraseña
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['contrasena'])) {
-            // La contraseña es correcta, inicia sesión o realiza otras acciones
 
-            // Guardar el nombre de usuario en la sesión
             session_start();
             $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
 
-            // Redirigir al usuario a su página correspondiente
             if ($row['tipo_usuario'] == 'administrador') {
                 header("Location: admin.php");
             } else if ($row['tipo_usuario'] == 'cliente') {
                 header("Location: perfil.php");
             } else {
-                // Otro tipo de usuario, redirigir a una página por defecto
                 header("Location: dashboard.php");
             }
-            exit(); // Asegura que no se ejecute más código después de la redirección
+            exit();
         } else {
             echo "Contraseña incorrecta";
         }
@@ -52,17 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Usuario no encontrado";
     }
 
-    // Cerrar la consulta
     $query->close();
 }
 
-// Cierra la conexión al final del archivo si ya no la necesitas
 $conn->close();
 ?>
-
-
-<!-- Resto del código HTML -->
-
 
 <!DOCTYPE html>
 <html lang="en">

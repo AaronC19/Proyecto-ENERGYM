@@ -1,48 +1,39 @@
 <?php
-// Establecer la conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "aaronCR14";
+$password = "Maniakoloko1332*";
 $dbname = "inicioderegistro";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recuperar datos del formulario y evitar inyección SQL
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $email = mysqli_real_escape_string($conn, $_POST['correo']);
     $password = mysqli_real_escape_string($conn, $_POST['contrasena']);
     $confirm_password = mysqli_real_escape_string($conn, $_POST['confirmar']);
     $user_type = mysqli_real_escape_string($conn, $_POST['tipo_usuario']);
 
-    // Verificar que el tipo de usuario sea "cliente" antes de continuar
     if ($user_type !== "cliente") {
         echo "Error: Solo se permiten registros como clientes.";
         exit();
     }
 
-    // Hash de la contraseña (puedes usar algoritmos más seguros según tus necesidades)
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Realizar la inserción en la base de datos
     $insert_query = "INSERT INTO usuarios (nombre_usuario, correo, contrasena, tipo_usuario) VALUES ('$username', '$email', '$hashed_password', '$user_type')";
 
     if ($conn->query($insert_query) === TRUE) {
-        // Registro exitoso, redirige a index.php
         header("Location: index.php");
-        exit(); // Asegura que no se ejecute más código después de la redirección
+        exit();
     } else {
         echo "Error al registrar el usuario: " . $conn->error;
     }
 }
 
-// Cierra la conexión al final del archivo si ya no la necesitas
 $conn->close();
 ?>
 
