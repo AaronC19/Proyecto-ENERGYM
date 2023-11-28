@@ -114,11 +114,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     );
 
     // importamos la librería de fpdf.php en codigos
-    require('C:/xampp/htdocs/Proyecto_Web_2/codigos/fpdf.php');
+    require('F:\xampp\htdocs\Proyecto_Web_2\codigos\fpdf.php');
 
     // Declara herencia entre clases para definir el encabezado
     // y pie de página del documento
-    class tPDF extends tFPDF
+    class tPDF extends FPDF
     {
 
         const SEPARATOR_LINE_THICKNESS = 1.5;
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $this->SetFillColor(255, 255, 255);
 
             // Posicionamos la imagen y el texto sobre el fondo coloreado
-            $this->Image('C:/xampp/htdocs/Proyecto_Web_2/codigos/img/th.jpeg', 10, 5, 20);
+            $this->Image('F:\xampp\htdocs\Proyecto_Web_2\codigos\img\th.jpeg', 10, 5, 20);
             $this->SetFont('Arial', 'B', 12);
             // Cambiamos el color de la letra a blanco
             $this->SetTextColor(255, 255, 255);
@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
         // Lista de ejercicios
         foreach ($ejercicios as $ejercicio) {
-            $pdf->Cell(0, 10, utf8_decode("🏋️ $ejercicio"), 0, 1, 'L');
+            $pdf->Cell(0, 10, utf8_decode("$ejercicio"), 0, 1, 'L');
         }
 
         // Agregamos una línea de separación estilizada entre grupos
