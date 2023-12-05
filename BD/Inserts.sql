@@ -1,6 +1,7 @@
 USE inicioderegistro;
 
 -- Insertar usuarios
+/*
 INSERT INTO usuarios (nombre_usuario, correo, contrasena, tipo_usuario) VALUES
 ('Ana', 'ana@gmail.com', 'claveana1', 'cliente'),
 ('Cristian', 'Cristian@gmail.com', 'clavejuan2', 'cliente'),
@@ -22,6 +23,9 @@ INSERT INTO usuarios (nombre_usuario, correo, contrasena, tipo_usuario) VALUES
 ('Victor', 'victor@gmail.com', 'clavevictor9', 'cliente'),
 ('Natalia', 'natalia@gmail.com', 'clavenatalia1', 'cliente'),
 ('Alejandro', 'alejandro@gmail.com', 'clavealejandro2', 'cliente');
+*/
+
+
 
 -- Insertar administradores
 INSERT INTO usuarios (nombre_usuario, correo, contrasena, tipo_usuario) 
@@ -33,11 +37,9 @@ VALUES
 
 -- Eliminar usuarios
 /*
-SET SQL_SAFE_UPDATES = 0;
 DELETE FROM usuarios WHERE tipo_usuario = 'administrador';
 DELETE FROM usuarios WHERE tipo_usuario = 'cliente';
 ALTER TABLE usuarios AUTO_INCREMENT = 1;
-SET SQL_SAFE_UPDATES = 1;
 */
 
 

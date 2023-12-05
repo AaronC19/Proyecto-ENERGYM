@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Maniakoloko1332*";
+$password = "1234";
 $dbname = "inicioderegistro";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,9 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['contrasena'])) {
-
+    
             session_start();
             $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
+            $_SESSION['correo_usuario'] = $row['correo'];
+            $_SESSION['fecha_registro'] = $row['fecha_registro'];
+            $_SESSION['numero_telefonico'] = $row['numero_telefonico'];
 
             if ($row['tipo_usuario'] == 'administrador') {
                 header("Location: admin.php");
@@ -38,8 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Contraseña incorrecta";
         }
     } else {
-        echo "Usuario no encontrado";
+        echo "Usuario no encontrado" ;
     }
+
+
 
     $query->close();
 }
@@ -79,8 +84,13 @@ $conn->close();
                                     <input type="text" class="form-control" name="username" id="username" required />
                                 </div>
                                 <div class="form-group">
-                                    <label for="password">Contraseña</label>
-                                    <input type="password" id="contrasena" name="contrasena" class="form-control" required />
+                                    <label for="contrasena">Contraseña</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" name="contrasena" id="contrasena" required />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">Mostrar</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input check1" />
@@ -121,6 +131,9 @@ $conn->close();
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="codigos/js/mostrar_contrasena.js"></script>
 </body>
+
 
 </html>

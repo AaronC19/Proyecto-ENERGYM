@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Verificar si el usuario ha iniciado sesión
+// Verificar si el usuario está autenticado
 if (!isset($_SESSION['nombre_usuario'])) {
     header("Location: login.php");
     exit();
@@ -9,6 +9,14 @@ if (!isset($_SESSION['nombre_usuario'])) {
 
 // Recuperar información del perfil desde la base de datos (ejemplo)
 $nombre_usuario = $_SESSION['nombre_usuario'];
+$email = $_SESSION['correo_usuario'];
+$fecha_registro = $_SESSION['fecha_registro'];
+$numero_telefonico = $_SESSION['numero_telefonico'];
+
+
+ // Corrige el nombre del índice
+
+// Ahora puedes usar $nombre_usuario y $email en esta página
 // Supongamos que tu tabla de usuarios tiene un campo llamado 'informacion_adicional'
 // Realiza una consulta SQL para obtener la información del perfil según el nombre de usuario
 // $sql = "SELECT informacion_adicional FROM usuarios WHERE nombre_usuario = ?";
@@ -28,7 +36,7 @@ $informacion_adicional = "Información adicional del usuario";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <style>
         body {
-            background-color: #f2f0f4; 
+            background-color: #f2f0f4;
             color: #343a40;
             display: flex;
             flex-direction: column;
@@ -36,7 +44,7 @@ $informacion_adicional = "Información adicional del usuario";
         }
 
         .navbar {
-            background-color: #800080; 
+            background-color: #800080;
         }
 
         .navbar-brand,
@@ -49,13 +57,41 @@ $informacion_adicional = "Información adicional del usuario";
         }
 
         .text-purple {
-            color: #800080; 
+            color: #800080;
         }
 
         footer {
             background-color: #800080;
             color: #ffffff;
             padding: 15px 0;
+        }
+
+        .profile-picture {
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        ul{
+            margin: 25px;
+            font-size: 18px;
+        }
+
+        .profile-picture img {
+            border: 5px solid;
+            border-radius: 50%;
+            width: 150px; /* Adjust the width as needed */
+            height: 150px; /* Adjust the height as needed */
+            
+        }
+
+        .profile-info {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -96,9 +132,32 @@ $informacion_adicional = "Información adicional del usuario";
     <section class="py-5">
         <div class="container text-center">
             <h1 class="text-purple">¡Bienvenido, <?php echo $nombre_usuario; ?>!</h1>
-            <p class="lead">Gracias por iniciar sesión. Estamos emocionados de acompañarte en tu viaje hacia la salud y el estado físico.</p>
+
+            <!-- Cuadro de foto de perfil centrada -->
+
+            <p class="lead mt-3">Gracias por iniciar sesión. Estamos emocionados de acompañarte en tu viaje hacia la salud y el estado físico.</p>
             <hr class="my-4">
-            <p>Información del perfil: <?php echo $informacion_adicional; ?></p>
+
+            <!-- Información del perfil -->
+            <div class="text-left">
+                <div class="profile-info text-left mt-3">
+                    <div class="profile-picture">
+                        <img src="codigos/img/iconoImagen.jpg" alt="Foto de perfil" class="img-fluid rounded-circle" style="max-width: 100%; height: auto;">
+
+                        <!-- Información del perfil -->
+                        <h4>Información del perfil:</h4>
+                        <div style="text-align: left;">  
+                            <ul>
+                                <li><strong>Nombre de usuario:</strong> <?php echo $nombre_usuario; ?></li>
+                                <li><strong>Correo electrónico:</strong> <?php echo $email; ?></li>
+                                <li><strong>Numero telefonico:</strong> <?php echo $numero_telefonico; ?></li>
+                                <li><strong>Fecha de registro:</strong> <?php echo $fecha_registro; ?></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

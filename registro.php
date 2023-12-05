@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Maniakoloko1332*";
+$password = "1234";
 $dbname = "inicioderegistro";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($conn, $_POST['contrasena']);
     $confirm_password = mysqli_real_escape_string($conn, $_POST['confirmar']);
     $user_type = mysqli_real_escape_string($conn, $_POST['tipo_usuario']);
+    $phone_number = mysqli_real_escape_string($conn, $_POST['numero_telefonico']);
 
     if ($user_type !== "cliente") {
         echo "Error: Solo se permiten registros como clientes.";
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $insert_query = "INSERT INTO usuarios (nombre_usuario, correo, contrasena, tipo_usuario) VALUES ('$username', '$email', '$hashed_password', '$user_type')";
+    $insert_query = "INSERT INTO usuarios (nombre_usuario, correo, contrasena, tipo_usuario, numero_telefonico) VALUES ('$username', '$email', '$hashed_password', '$user_type', '$phone_number')";
 
     if ($conn->query($insert_query) === TRUE) {
         header("Location: index.php");
@@ -33,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al registrar el usuario: " . $conn->error;
     }
 }
+
 
 $conn->close();
 ?>
@@ -72,12 +74,26 @@ $conn->close();
                                 <input type="email" class="form-control" name="correo" id="correo" required />
                             </div>
                             <div class="form-group">
+                                <label for="numero_telefonico">Número Telefónico (máximo 8 caracteres)</label>
+                                <input type="tel" class="form-control" name="numero_telefonico" id="numero_telefonico" maxlength="8" required />
+                            </div>
+                            <div class="form-group">
                                 <label for="contrasena">Contraseña</label>
-                                <input type="password" class="form-control" name="contrasena" id="contrasena" required />
+                                <div class="input-group">
+                                    <input type="password" class="form-control" name="contrasena" id="contrasena" required />
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">Mostrar</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="confirmar">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" name="confirmar" id="confirmar" required />
+                                <div class="input-group">
+                                    <input type="password" class="form-control" name="confirmar" id="confirmar" required />
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">Mostrar</button>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Tipo de usuario fijo como "cliente" -->
                             <input type="hidden" name="tipo_usuario" value="cliente">
@@ -103,6 +119,10 @@ $conn->close();
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="codigos/js/mostrar_contrasena.js"></script>
+
 </body>
+
 
 </html>
