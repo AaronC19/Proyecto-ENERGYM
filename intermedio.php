@@ -30,7 +30,21 @@
     </style>
 </head>
 <header>
-    <?php include("codigos/menu.inc"); ?>
+<nav>
+  <div class="titulo">
+    <h1 class="primero">ENER<span class="segundo">GYM</span></h1>
+  </div>
+  <div class="menu">
+    <!-- Agregar direcciones faltantes -->
+    <ul>
+      <li><a href="index.php">INICIO</a></li>
+      <li><a href="dieta.php">DIETA</a></li>
+      <li><a href="index.php">SOBRE NOSOTROS</a></li>
+      <li><a href="#contact">CONTACTO</a></li>
+      <li><a href="perfil.php">VOLVER AL PERFIL</a></li>
+    </ul>
+  </div>
+</nav>
 </header>
 
 <body>
@@ -44,7 +58,7 @@
                     <div class="col-2"></div>
                     <div class="col-8 mt-4 p-2">
                         <h1 class="mt-5 d-flex justify-content-center align-items-center text-white">
-                            Bienvenidos a las Rutinas para Avanzados
+                            Bienvenidos a las Rutinas para Intermedios
                         </h1>
                         <p class="mt-3 d-flex justify-content-center align-items-center text-white">
                             Aquí encontrarás rutinas de entrenamiento personalizadas para

@@ -3,20 +3,30 @@
 
 <head>
     <?php
-    // invoca cabecera de pa pagina
+    // invoca cabecera de la página
     include_once('codigos/enca.inc');
     ?>
+    <style>
+        .entrenadores .trainer {
+            transition: color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease; /* Agrega transición para color, box-shadow y transform */
+        }
+
+        .entrenadores a:hover .trainer {
+            color: #0f0f0f !important;
+            box-shadow: 0 0 20px 5px rgba(153, 0, 255, 0.7) !important;
+            transform: scale(1.05); /* Ajusta el valor según la escala que desees al hacer hover */
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <?php
-        // invoca menu de pa pagina
+        // invoca menu de la página
         include_once('codigos/menu.inc');
         ?>
     </header>
     <main>
-
         <div class="slider" id="inicio">
             <h1 id="slogantext">"Una vida, mantente en forma, lucha por ella.."</h1>
         </div>
@@ -24,16 +34,19 @@
         <div class="info" id="info">
             <center>
                 <h1>Entrenadores</h1>
+                <br>
                 <div class="continfo mt-5">
-                    <a href="entrenadorAaron.php">
-                        <div class="trainer" id="tr1"></div>
-                    </a>
-                    <a href="entrenadorJuan.php">
-                        <div class="trainer" id="tr2"></div>
-                    </a>
-                    <a href="entrenadorEmmanuel.php">
-                        <div class="trainer" id="tr3"></div>
-                    </a>
+                    <div class="entrenadores">
+                        <a href="entrenadorAaron.php">
+                            <div class="trainer" id="tr1"></div>
+                        </a>
+                        <a href="entrenadorJuan.php">
+                            <div class="trainer" id="tr2"></div>
+                        </a>
+                        <a href="entrenadorEmmanuel.php">
+                            <div class="trainer" id="tr3"></div>
+                        </a>
+                    </div>
                     <div class="text">
                         ¡Hola y bienvenido a tu sesión de entrenamiento! Nuestros nombres
                         son Aaròn, Juan y Emmanuel y seremos sus entrenadores por hoy. Antes
@@ -84,10 +97,10 @@
                             sans-serif;
                         ">
                         <div class="parallax"></div>
-                        Selecciona el nivel en el que te encuentras 🔥
+                        Registrate para descrubrir nuestras rutinas gratuitas 🔥
                     </h1>
 
-                    <a href="principiante.php">
+                    <a href="registro.php">
                         <div class="b1" style="
                             background-image: url('codigos/img/principiante.jpg');
                             background-size: cover;
@@ -97,7 +110,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="intermedio.php">
+                    <a href="registro.php">
                         <div class="b1" style="
                             background-image: url('codigos/img/intermedio.jpg');
                             background-size: cover;
@@ -107,7 +120,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="avanzado.php">
+                    <a href="registro.php">
                         <div class="b1" style="
                             background-image: url('codigos/img/avanzado.jpeg');
                             background-size: cover;
@@ -124,7 +137,7 @@
     </main>
     <footer>
         <?php
-        // llama al pie de la pagina
+        // llama al pie de la página
         include_once('codigos/pie.inc');
         ?>
     </footer>

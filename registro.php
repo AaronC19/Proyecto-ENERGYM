@@ -123,6 +123,4 @@ $conn->close();
     <script src="codigos/js/mostrar_contrasena.js"></script>
 
 </body>
-
-
 </html>

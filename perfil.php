@@ -34,100 +34,54 @@ $informacion_adicional = "Información adicional del usuario";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido, <?php echo $nombre_usuario; ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <style>
-        body {
-            background-color: #f2f0f4;
-            color: #343a40;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    <link rel="stylesheet" type="text/css" href="codigos/css/perfil.css">
 
-        .navbar {
-            background-color: #800080;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: #ffffff !important;
-        }
-
-        section {
-            padding: 50px 0;
-        }
-
-        .text-purple {
-            color: #800080;
-        }
-
-        footer {
-            background-color: #800080;
-            color: #ffffff;
-            padding: 15px 0;
-        }
-
-        .profile-picture {
-            margin: 0 auto;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        ul{
-            margin: 25px;
-            font-size: 18px;
-        }
-
-        .profile-picture img {
-            border: 5px solid;
-            border-radius: 50%;
-            width: 150px; /* Adjust the width as needed */
-            height: 150px; /* Adjust the height as needed */
-            
-        }
-
-        .profile-info {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-purple">
-        <div class="container">
-            <a class="navbar-brand text-white" href="#">ENERGYM</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end align-items-end" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="cliente.php">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="dieta.php">DIETA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#about">AVANCE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#services">PROGRESO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#contact">ENTRENADOR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="logout.php">CERRAR SESIÓN</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-purple">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">ENERGYM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.php">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dieta.php">DIETA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">AVANCE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#services">PROGRESO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact">ENTRENADOR</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="rutinasDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        RUTINAS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="rutinasDropdown">
+                        <a class="dropdown-item" href="principiante.php">PRINCIPIANTES</a>
+                        <a class="dropdown-item" href="intermedio.php">INTERMEDIOS</a>
+                        <a class="dropdown-item" href="avanzado.php">AVANZADOS</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="logout.php">CERRAR SESIÓN</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
+
 
     <section class="py-5">
         <div class="container text-center">
