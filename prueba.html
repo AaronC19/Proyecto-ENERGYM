@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SupportUs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/supportUs.css" />
+  </head>
+
+  <style>
+    .box-containerS {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 15px;
+    }
+
+    .box-containerS .boxS {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      background: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .box-containerS .boxS img {
+      height: 80px;
+    }
+
+    .box-containerS .boxS h3 {
+      color: #444;
+      font-size: 22px;
+      padding: 10px 0;
+    }
+
+    .box-containerS .boxS p {
+      color: #777;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .box-containerS .boxS .btn {
+      margin-top: 10px;
+      display: inline-block;
+      background: #333;
+      color: #fff;
+      font-size: 17px;
+      border-radius: 5px;
+      padding: 8px 25px;
+    }
+
+    .box-containerS .boxS .btn:hover {
+      letter-spacing: 1px;
+    }
+
+    .box-containerS .boxS:hover {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.03);
+    }
+
+    .containerS {
+      padding: 15px 9%;
+      padding-bottom: 100px;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home.html"
+          ><img src="img/icon.png" alt="icon" width="80px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Faro Huellitas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/support_us.html">Support Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="/adopt.html" class="nav-link">Adopt</a>
+              </li>
+              <li class="nav-item">
+                <a href="/volunteer.html" class="nav-link">Volunteering</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Acerca
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="/about_us.html">About Us</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">T & C</a></li>
+                  <li><a class="dropdown-item" href="/faq.html">FAQs</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <br />
+
+            <div class="d-flex justify-content-center">
+              <a href="/sign_up.html">
+                <button
+                  type="button"
+                  style="
+                    background: #84fab0;
+
+                    background: -webkit-linear-gradient(
+                      to right,
+                      rgba(132, 250, 176, 1),
+                      rgba(143, 211, 244, 1)
+                    );
+
+                    background: linear-gradient(
+                      to right,
+                      rgba(132, 250, 176, 1),
+                      rgba(143, 211, 244, 1)
+                    );
+                  "
+                  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                >
+                  Register
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -9,7 +9,7 @@ body {
 .navbar {
     background-color: #800080;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .navbar-brand,
@@ -26,10 +26,12 @@ body {
 
 .nav-item a:hover {
     color: #bd5aff !important;
+    
 }
 
 .nav-item.active a {
     color: #9900ff; 
+    
 }
 
 section {
