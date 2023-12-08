@@ -57,11 +57,10 @@
         </div>
     </div>
 </div>
-<!-- Modifica tu formulario HTML -->
 
 <div class="contacto">
     <h2>Si tienes alguna duda, ¡aquí puedes contactarnos!</h2>
-    <form action="procesar_formulario.php" method="post">
+    <form action="pagos.php" method="post">
         <div class="campo">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -82,7 +81,7 @@
 </div>
 
 
-<footer class="bg-purple text-white text-center py-3">
+<footer>
         <p>
             &copy; 2023 Todos los derechos reservados.
         </p>
